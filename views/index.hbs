@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DS 1307 RTC Management tool">
+    <meta name="author" content="Mohamed Belhassen">
+    
+    <title>App</title>
+    {{!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"> --}}
+        <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+    {{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+
+
+  </head>
+  <body>
+
+
+    
+<div class="container">
+
+
+    <br>
+    <div class="col-sm-offset-4 col-sm-4">
+		<div class="panel panel-info">
+			<div class="panel-heading">Réglage Temps & Date</div>
+			<div class="panel-body"> 
+        <form action="/" method="post" >
+          <div class="input-group date col-sm-12" data-provide="datepicker">
+            <label for="date">Date: </label>
+            <input name="date" id="date" class="form-control" type="date" value="{{ date }}"/>
+      
+         </div>
+          <div class="input-group time col-sm-12" >
+
+            <label for="time">Temps: </label>
+            <input name="time" id="time" class="form-control" type="time" />
+          </div>
+          <div>&nbsp;</div>
+          <div>
+          {{#if error.date}}
+                  <div class="alert alert-danger" role="alert">
+                  <small>{{error.date}}</small>   
+                  </div>            
+          {{/if}}
+
+          {{#if success.date}}
+                  <div class="alert alert-success" role="alert">
+                  <small>{{success.date}}</small>   
+                  </div>            
+          {{/if}}
+
+          {{#if error.time}}
+                  <div class="alert alert-danger" role="alert">
+                  <small>{{error.time}}</small>   
+                  </div>            
+          {{/if}}
+
+          {{#if success.time}}
+                  <div class="alert alert-success" role="alert">
+                  <small>{{success.time}}</small>   
+                  </div>            
+          {{/if}}
+          </div>
+          <div class="form-group" >
+          <button type="submit" class="btn btn-info pull-right">Submit</button>
+					{{!-- <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
+						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label> --}}
+          
+
+					</div>
+  
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    {{!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
+
+      
+  </body>
+</html>
