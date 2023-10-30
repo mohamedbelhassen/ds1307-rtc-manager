@@ -20,8 +20,8 @@ import { Response } from 'express';
 //import { join } from 'path';
 import * as shell from 'shelljs';
 
-const piUserHomeFolderPath = '/home/pi/rtc-manager/';
-const rtcManagerPath = piUserHomeFolderPath + 'rtc_time_setter/';
+const piUserHomeFolderPath = '/home/pi/';
+const rtcManagerPath = piUserHomeFolderPath + 'ds1307-rtc-manager/';
 
 // import * as shell from 'shelljs';
 @Controller()
@@ -42,8 +42,8 @@ export class AppController {
     const time = dateTimeDto.time.replace(':', ' ');
     const date = dateTimeDto.date.replaceAll('-', ' ');
 
-    const time_command = rtcManagerPath + "set_time.sh '" + time + "'";
-    const date_command = rtcManagerPath + "set_date.sh '" + date + "'";
+    const time_command = "sudo " + rtcManagerPath + "set_time.sh '" + time + "'";
+    const date_command = "sudo " + rtcManagerPath + "set_date.sh '" + date + "'";
 
     const error = {
       time: null,
@@ -66,13 +66,13 @@ export class AppController {
 
     if (shell.exec(date_command).code !== 0) {
       //shell.echo('Error: execution of pipe controller failed');
-      error.time = 'Error occured when setting date';
+      error.date = 'Error occured when setting date';
       shell.exit(1);
     }else{
       success.date = 'Date is well set';
 
     }
-    error.time = 'Error occured when setting time';
+    //error.date = 'Error occured when setting time';
     const currentDate = new Date();
     return res.render('index.hbs', { error: error, 
       success:success,

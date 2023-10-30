@@ -1,4 +1,11 @@
 # impotant infos:
+
+Node 18 could  be instqlled using the follozing tuto:
+https://pimylifeup.com/raspberry-pi-nodejs/
+
+to install yarn and node on your Pim follow this tutorial:
+https://lindevs.com/install-yarn-on-raspberry-pi
+
 I am using yarn to install packages not npm.
 
 
