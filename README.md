@@ -1,3 +1,32 @@
+
+@reboot cd /home/pi/ds1307-rtc-manager; /usr/bin/yarn run start:prod 2>/home/pi/ds1307-rtc-manager/booterror.log
+
+
+
+The Quick Installer will complete the steps in the manual installation for you.
+
+Following a reboot, the wireless AP network will be configured as follows:
+
+IP address: 10.3.141.1   --> http://10.3.141.1:4040/
+Username: admin
+Password: secret
+DHCP range: 10.3.141.50 --> 10.3.141.254
+SSID: raspi-webgui
+Password: ChangeMe  --> 16901690
+It is strongly recommended that you change these default credentials in RaspAP's Authentication and Hotspot > Security panels.
+
+port modified to 4040
+toDo
+
+3-r2er une page php pour pouvoir configurer le temps facilememt
+4-lancer le fan que si necessaire
+
+
+https://howchoo.com/pi/control-raspberry-pi-fan-temperature-python/
+
+https://forums.raspberrypi.com/viewtopic.php?t=305481
+
+
 # ToDo 
 
 -reboot the system after each date change or add a button for reboot

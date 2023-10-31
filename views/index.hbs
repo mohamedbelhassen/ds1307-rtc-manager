@@ -79,9 +79,10 @@
 
 			</div>
 		</div>
-    <p>&nbsp;</p>
-    {{#if success.time && success.date}}
-            <div class="alert alert-info" role="alert">
+   
+    {{#if success.time }}
+       <p>To properly handle your changes you should restart your system.</p>
+         <div >
                 <form action="/restart" method="post" > 
                     <button type="submit" class="btn btn-info pull-right">Restart the system</button>
                 </form>

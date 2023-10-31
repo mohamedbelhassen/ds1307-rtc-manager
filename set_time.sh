@@ -45,6 +45,7 @@ minute=$(("$(echo $1 |awk '{print($2)}')"))
 
 fi
 
+echo "hour $hour  minute $minute"
 
 #hour="$1"
 #minute="$2"
@@ -71,7 +72,7 @@ fi
 #yyyy is the year; it can be two digit or four digit: your choice. I prefer to use four digit years whenever I can for better clarity and less confusion
 #ss is two digit seconds. Notice the period (.) before the ss.
 #Let us say you want to set your computers new time to December 6, 2007, 22:43:55, then you would use:
-if [ debug = true ]; then
+if [ $debug = true ]; then
      echo "we will set the date to:"
      echo "$month$day$hour$minute$year.00"
 fi
@@ -80,7 +81,7 @@ timedatectl set-ntp false
 date "$month$day$hour$minute$year.00"
 hwclock -w
 
-if [ debug = true ]; then
+if [ $debug = true ]; then
      echo "RTC is set to"
      hwclock -r
 fi
