@@ -79,5 +79,10 @@ export class AppController {
       date: currentDate.toLocaleDateString('en-CA') });
   }
 
-  
+  @Post('restart')
+  @Render('index')
+  restart() {
+    shell.exec('sudo reboot');
+    return {};
+  }
 }

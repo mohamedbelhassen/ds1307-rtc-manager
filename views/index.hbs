@@ -75,16 +75,18 @@
   
         </form>
 
-        {{#if success.time and success.date}}
+
+
+			</div>
+		</div>
+    <p>&nbsp;</p>
+    {{#if success.time && success.date}}
             <div class="alert alert-info" role="alert">
                 <form action="/restart" method="post" > 
                     <button type="submit" class="btn btn-info pull-right">Restart the system</button>
                 </form>
             </div>            
-        {{/if}}
-
-			</div>
-		</div>
+    {{/if}}
 	</div>
 </div>
     <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
