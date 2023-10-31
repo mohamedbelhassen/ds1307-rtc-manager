@@ -1,4 +1,5 @@
 # impotant infos:
+@reboot /usr/bin/yarn run start:prod /home/pi/ds1307-rtc-manager
 
 Node 18 could  be instqlled using the follozing tuto:
 https://pimylifeup.com/raspberry-pi-nodejs/

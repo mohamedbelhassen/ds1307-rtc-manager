@@ -45,17 +45,17 @@ fi
 
 
 #echo "reached 1"
-if [ $(($month)) -lt 10  ]
-then
-     month="0$month"
-	
-fi
+#if [ $(($month)) -lt 10  ]
+#then
+#     month="0$month"
+#	
+#fi
 
-if [ $(($day)) -lt 10 ]
-then
-     day="0$day"
-	
-fi
+#if [ $(($day)) -lt 10 ]
+#then
+#     day="0$day"
+#	
+#fi
 
 
 read y m d hour minute second< <(date +"%Y %m %d %H %M %S");
