@@ -1,3 +1,12 @@
+# ToDo 
+
+-reboot the system after each date change or add a button for reboot
+-choisir un réglage de calcul de prière adéquat ou envoyer les horaires à Mawaquit
+-documenter convenablement la solution de réglage de RTC et la mettre en open source sur github
+-concevoir un boitier pour l'appareil
+-faire le wiring du ventilateur ainsi qu'un bouton poussoir de test de la ventilation
+
+
 # impotant infos:
 @reboot /usr/bin/yarn run start:prod /home/pi/ds1307-rtc-manager
 
@@ -36,7 +45,8 @@ I am using yarn to install packages not npm.
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+"RTC DS1307 Manager" is free open source project which let you easily control the date and time of your Raspberry Pi and persisting this time in the connected DS 1307 Real Time Clock (RTC) Module.
+T
 
 ## Installation
 

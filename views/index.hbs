@@ -74,6 +74,15 @@
 					</div>
   
         </form>
+
+        {{#if success.time and success.date}}
+            <div class="alert alert-info" role="alert">
+                <form action="/restart" method="post" > 
+                    <button type="submit" class="btn btn-info pull-right">Restart the system</button>
+                </form>
+            </div>            
+        {{/if}}
+
 			</div>
 		</div>
 	</div>
