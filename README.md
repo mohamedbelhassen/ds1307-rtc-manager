@@ -29,12 +29,12 @@ https://forums.raspberrypi.com/viewtopic.php?t=305481
 
 # ToDo 
 
--reboot the system after each date change or add a button for reboot
--choisir un réglage de calcul de prière adéquat ou envoyer les horaires à Mawaquit
--documenter convenablement la solution de réglage de RTC et la mettre en open source sur github
+-saisir les horaires officiels de la région de Gabes
 -concevoir un boitier pour l'appareil
--faire le wiring du ventilateur ainsi qu'un bouton poussoir de test de la ventilation
-
+-ajout d'un bouton dans le home screen permettant de tester la ventilateur (30 secondes)
+-faire le wiring du ventilateur
+-documenter convenablement la solution de réglage de RTC et la mettre en open source sur github
+-
 
 # impotant infos:
 @reboot /usr/bin/yarn run start:prod /home/pi/ds1307-rtc-manager

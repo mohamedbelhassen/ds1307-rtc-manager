@@ -79,15 +79,24 @@
 
 			</div>
 		</div>
-   
+    <p>To test your system fan (60s), just click the following button:</p>
+    <div >
+          <form action="/fan_test" method="post" > 
+              <button type="submit" class="btn btn-info pull-right">Activate system fan</button>
+          </form>
+    </div>     
+
     {{#if success.time }}
        <p>To properly handle your changes you should restart your system.</p>
          <div >
                 <form action="/restart" method="post" > 
                     <button type="submit" class="btn btn-info pull-right">Restart the system</button>
                 </form>
-            </div>            
+          </div>            
     {{/if}}
+
+          
+
 	</div>
 </div>
     <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>

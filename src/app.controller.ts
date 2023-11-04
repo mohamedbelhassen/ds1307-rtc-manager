@@ -21,8 +21,8 @@ import { Response } from 'express';
 import * as shell from 'shelljs';
 
 const piUserHomeFolderPath = '/home/pi/';
+//const rtcManagerPath = piUserHomeFolderPath + 'raspberry-pi-rtc-management-web-app/';
 const rtcManagerPath = piUserHomeFolderPath + 'ds1307-rtc-manager/';
-
 // import * as shell from 'shelljs';
 @Controller()
 export class AppController {
@@ -84,5 +84,13 @@ export class AppController {
   restart() {
     shell.exec('sudo reboot');
     return {};
+  } 
+
+  @Post('fan_test')
+  @Render('index')
+  test_sytem_fan() {
+    shell.exec('/usr/bin/python ' + rtcManagerPath + 'alluler_ventilo.py');
+    return {};
   }
+
 }
