@@ -88,7 +88,7 @@ export class AppController {
 
   @Post('fantest')
   @Render('index')
-  test_sytem_fan() {
+  fantest() {
     shell.exec('/usr/bin/python ' + rtcManagerPath + 'alluler_ventilo.py');
     return {};
   }
