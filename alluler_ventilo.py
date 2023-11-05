@@ -47,7 +47,7 @@ def main():
     #time.sleep(60)
 	
     gpio.output(sireneRelay1Pin, gpio.HIGH)
-    time.sleep(500)
+    time.sleep(10)
     #print("off")
     gpio.output(sireneRelay1Pin, gpio.LOW)
     time.sleep(1)

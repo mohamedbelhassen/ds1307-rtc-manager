@@ -9,7 +9,7 @@ Following a reboot, the wireless AP network will be configured as follows:
 
 IP address: 10.3.141.1   --> http://10.3.141.1:4040/
 Username: admin
-Password: secret
+Password: secret --> ab nm pr (mohamed belhassen)
 DHCP range: 10.3.141.50 --> 10.3.141.254
 SSID: raspi-webgui
 Password: ChangeMe  --> 16901690
