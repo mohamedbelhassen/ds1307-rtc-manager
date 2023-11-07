@@ -4,7 +4,7 @@
 
 Note: This app could be used to test if the your raspberry Pi fan (connected to GPIO and not directly connected to VCC) is working or not by the means of a test button.
 
-# impotant infos:
+# impotant infos
 
 This web app is tested with the  DS 1307 RTC module. But, normally, it should work with any RTC model. 
 
