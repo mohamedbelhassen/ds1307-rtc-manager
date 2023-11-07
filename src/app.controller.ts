@@ -22,7 +22,8 @@ import * as shell from 'shelljs';
 
 const piUserHomeFolderPath = '/home/pi/';
 //const rtcManagerPath = piUserHomeFolderPath + 'raspberry-pi-rtc-management-web-app/';
-const rtcManagerPath = piUserHomeFolderPath + 'ds1307-rtc-manager/';
+const appFolder = 'ds1307-rtc-manager/'
+const rtcManagerPath = piUserHomeFolderPath + appFolder;
 // import * as shell from 'shelljs';
 @Controller()
 export class AppController {
